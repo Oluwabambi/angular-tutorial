@@ -1,24 +1,2 @@
-<div class="container">
-  <h1 class="text-primary">{{title}}</h1>
-  <button class="btn-success btn" (click)="showAlert()"><i class="bi bi-bus-front"></i> Click this</button>
-  <i class="bi bi-briefcase-fill"></i>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, cupiditate omnis. Accusantium quisquam ratione eligendi!</p>
-  <p>Lorem ipsum dolor sit amet.</p>
-  <span class="material-symbols-outlined">
-    search
-  </span>
-  <h1>My name: {{userName}}</h1> <!-- userName value changes when name input value changes -->
-
-  <form [formGroup]="newForm">
-    <label class="form-label">Name:</label>
-    <input formControlName="name" class="form-control" type="text">
-    <label class="form-label">Age:</label>
-    <input formControlName="age" class="form-control" type="text">
-    <label class="form-label">Email:</label>
-    <input formControlName="email" class="form-control" type="email">
-    <label class="form-label">Summary:</label>
-    <textarea formControlName="summary" class="form-control" cols="10" rows="10"></textarea>
-    <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit form</button>
-  </form>
-</div>
+<app-header></app-header>
 <router-outlet></router-outlet>
