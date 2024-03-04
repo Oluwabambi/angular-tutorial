@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ApiHandlerService } from '../services/api-handler.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { StudentsService } from '../services/students/students.service';
 
 @Component({
   selector: 'app-contact',
@@ -18,11 +19,11 @@ export class ContactComponent {
     numOfCredits: new FormControl('', [Validators.required])
   })
 
-  constructor( private api: ApiHandlerService ) {}
+  constructor( private api: StudentsService ) {}
 
   addStudent(data: any) {
     this.loading = true;
-    this.api.post(data).subscribe({
+    this.api.addStudent(data).subscribe({
       next: (response) => {
         this.loading = false;
         console.log(this.studentForm);    // status shows as valid

@@ -14,11 +14,11 @@ export class AboutComponent {
   constructor( private api: ApiHandlerService ) {}
 
   ngOnInit() {
-    this.api.get().subscribe({
-      next: (response) => {
-        console.log(response);
-      },
-      error: () => {}
-    })
+    // this.api.get().subscribe({
+    //   next: (response) => {
+    //     console.log(response);
+    //   },
+    //   error: () => {}
+    // })
   }
 }

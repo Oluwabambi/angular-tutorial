@@ -20,6 +20,14 @@ const routes: Routes = [
     path: 'hero/:id', component: HeroDetailsComponent
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+  },
+  {
     path: '**', component: PageNotFoundComponent
   },
 ];
